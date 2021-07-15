@@ -1,7 +1,7 @@
 """chattering cell type, subclass from izhCell"""
 import izhikevich_cells as izh
 
-class ibCell(izh.izhCell):
+class chatteringCell(izh.izhCell):
     def __init__(self, stimVal):
         super().__init__(stimVal)
         #define parameters that need modification 
@@ -16,7 +16,7 @@ class ibCell(izh.izhCell):
         self.d = 150
         self.vpeak = 50
 
-myCell = ibCell(4000)
+myCell = chatteringCell(4000)
 myCell.simulate()
 
 if __name__=='__main__':
